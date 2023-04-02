@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeMapViewController" customModule="IziPark" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="mtB-Xs-2te" id="ijv-ta-hmW"/>
+                <outlet property="collectionViewBottomConstraint" destination="eGT-2l-ldD" id="H1N-r2-clv"/>
+                <outlet property="mapView" destination="O1s-hs-yAY" id="SxF-xV-wXU"/>
+                <outlet property="searchView" destination="BEP-q7-w2H" id="C7q-II-Ufw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1s-hs-yAY" customClass="IziMap" customModule="IziPark" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEP-q7-w2H" customClass="SpotSearchView" customModule="IziPark" customModuleProvider="target">
+                    <rect key="frame" x="16" y="79" width="361" height="264"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="264" id="8Qb-nw-1NH"/>
+                    </constraints>
+                </view>
+                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-Xs-2te">
+                    <rect key="frame" x="0.0" y="596" width="393" height="210"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="210" id="8q9-AQ-rMO"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aiR-Fu-Pv8">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mtB-Xs-2te" secondAttribute="trailing" id="4uA-Td-bE2"/>
+                <constraint firstItem="BEP-q7-w2H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="A9B-uI-S6u"/>
+                <constraint firstAttribute="bottom" secondItem="O1s-hs-yAY" secondAttribute="bottom" id="Fe0-5q-Vvb"/>
+                <constraint firstItem="O1s-hs-yAY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gxm-GF-A2K"/>
+                <constraint firstItem="mtB-Xs-2te" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RIp-ac-FpA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BEP-q7-w2H" secondAttribute="trailing" constant="16" id="Ygv-V3-WrR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mtB-Xs-2te" secondAttribute="bottom" constant="12" id="eGT-2l-ldD"/>
+                <constraint firstItem="O1s-hs-yAY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jTN-vg-Du3"/>
+                <constraint firstItem="O1s-hs-yAY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="l8w-xk-H5r"/>
+                <constraint firstItem="BEP-q7-w2H" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="urd-jj-ZMs"/>
+            </constraints>
+            <point key="canvasLocation" x="133.58778625954199" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

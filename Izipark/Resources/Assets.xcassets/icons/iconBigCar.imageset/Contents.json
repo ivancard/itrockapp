@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "iconBigCar.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

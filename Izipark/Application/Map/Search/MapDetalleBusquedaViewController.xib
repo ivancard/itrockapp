@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapDetalleBusquedaViewController" customModule="Izipark" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionBottomConstraint" destination="rGC-5q-7nM" id="Vsx-hK-3h9"/>
+                <outlet property="collectionView" destination="3ND-1x-dZj" id="Njh-BQ-g1z"/>
+                <outlet property="mapView" destination="Hvc-qF-JAY" id="qyO-Xg-HBA"/>
+                <outlet property="searchDetail" destination="Hjy-Pc-jGO" id="Zk7-Xb-VE5"/>
+                <outlet property="searchDetailBottomConstraint" destination="XzB-PD-f14" id="bmE-Y9-FJd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvc-qF-JAY" customClass="IziMap" customModule="Izipark" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-92-F6D">
+                    <rect key="frame" x="119.66666666666669" y="75" width="154" height="44"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4Q-na-6Jv">
+                            <rect key="frame" x="0.0" y="0.0" width="154" height="44"/>
+                            <color key="backgroundColor" name="White"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="kJz-dR-zoi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                            <color key="tintColor" name="Black"/>
+                            <inset key="titleEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="6" maxY="0.0"/>
+                            <state key="normal" title="Ver Listado">
+                                <color key="titleColor" name="Black"/>
+                                <imageReference key="image" image="list.bullet" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                            </state>
+                            <connections>
+                                <action selector="spotListAction:" destination="-1" eventType="touchUpInside" id="4eM-m8-Smq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="White"/>
+                    <constraints>
+                        <constraint firstItem="E4Q-na-6Jv" firstAttribute="centerY" secondItem="pVq-92-F6D" secondAttribute="centerY" id="CFr-Ey-apb"/>
+                        <constraint firstItem="E4Q-na-6Jv" firstAttribute="leading" secondItem="pVq-92-F6D" secondAttribute="leading" id="S3C-wE-LGs"/>
+                        <constraint firstAttribute="height" constant="44" id="SUd-03-8ym"/>
+                        <constraint firstAttribute="trailing" secondItem="E4Q-na-6Jv" secondAttribute="trailing" id="WxC-Gh-IV2"/>
+                        <constraint firstAttribute="width" constant="154" id="Zad-y8-Ihg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3ND-1x-dZj">
+                    <rect key="frame" x="0.0" y="313" width="393" height="210"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="210" id="PQS-v6-T0L"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rw5-eR-HsV">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjy-Pc-jGO" customClass="SearchDetailView" customModule="Izipark" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="543" width="393" height="275"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="275" id="cpX-Nl-4NE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="pVq-92-F6D" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7R5-Kb-tW5"/>
+                <constraint firstItem="3ND-1x-dZj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="82u-Eu-5Ar"/>
+                <constraint firstAttribute="bottom" secondItem="Hvc-qF-JAY" secondAttribute="bottom" id="AZD-7Q-bw6"/>
+                <constraint firstItem="Hvc-qF-JAY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GkB-UD-x99"/>
+                <constraint firstItem="Hvc-qF-JAY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="V7h-RZ-MTK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Hjy-Pc-jGO" secondAttribute="bottom" id="XzB-PD-f14"/>
+                <constraint firstItem="Hjy-Pc-jGO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b8i-Dh-rZG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hjy-Pc-jGO" secondAttribute="trailing" id="fGP-eI-Wt4"/>
+                <constraint firstItem="3ND-1x-dZj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g4R-Og-GZe"/>
+                <constraint firstItem="pVq-92-F6D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="lJB-o8-5Hu"/>
+                <constraint firstItem="Hvc-qF-JAY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mVu-To-8hw"/>
+                <constraint firstItem="Hjy-Pc-jGO" firstAttribute="top" secondItem="3ND-1x-dZj" secondAttribute="bottom" constant="20" id="rGC-5q-7nM"/>
+            </constraints>
+            <point key="canvasLocation" x="119.84732824427481" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <namedColor name="Black">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

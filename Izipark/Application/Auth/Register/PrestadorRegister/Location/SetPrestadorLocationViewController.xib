@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetPrestadorLocationViewController" customModule="Izipark" customModuleProvider="target">
+            <connections>
+                <outlet property="mapContainer" destination="hX5-hk-adP" id="1Ve-OC-Zpa"/>
+                <outlet property="resultsTableView" destination="9Mu-JE-9oD" id="8Xu-mt-AtR"/>
+                <outlet property="searchTextField" destination="2f2-ln-chg" id="DxD-Dk-HDN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Genial! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-UZ-ZeW">
+                    <rect key="frame" x="16" y="81" width="130.33333333333334" height="45"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="32"/>
+                    <color key="textColor" name="Black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solo necesitaremos algunos datos para registrar tu Spot y estaremos listos para empezar." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv9-C4-nVD">
+                    <rect key="frame" x="16" y="138" width="361" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ztw-cT-aCS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                    <color key="textColor" name="Black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-hk-adP">
+                    <rect key="frame" x="16" y="281" width="361" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="AZ6-vm-De7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="fld-01-usp">
+                    <rect key="frame" x="129.66666666666669" y="792" width="133.66666666666669" height="26"/>
+                    <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.13723613410596028" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQX-dV-AdH" customClass="IziButton" customModule="Izipark" customModuleProvider="target">
+                    <rect key="frame" x="16" y="748" width="361" height="44"/>
+                    <color key="backgroundColor" name="Primary"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="JDB-rF-7bR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Continuar">
+                        <color key="titleColor" name="White"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="continueButton:" destination="-1" eventType="touchUpInside" id="Qdd-O5-SxB"/>
+                    </connections>
+                </button>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Mu-JE-9oD">
+                    <rect key="frame" x="16" y="281" width="361" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="zel-iF-eIT"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresa tu dirección" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-ln-chg" customClass="MyTextField" customModule="Izipark" customModuleProvider="target">
+                    <rect key="frame" x="16" y="222" width="361" height="43"/>
+                    <color key="backgroundColor" name="White"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="1i9-FT-rJQ"/>
+                    </constraints>
+                    <color key="textColor" name="Black"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hX5-hk-adP" secondAttribute="trailing" constant="16" id="7FQ-ax-0Ld"/>
+                <constraint firstItem="fld-01-usp" firstAttribute="top" secondItem="DQX-dV-AdH" secondAttribute="bottom" id="7ZR-J3-ZEw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2f2-ln-chg" secondAttribute="trailing" constant="16" id="8Ia-8n-chR"/>
+                <constraint firstItem="2f2-ln-chg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="B3Q-pu-qFX"/>
+                <constraint firstItem="gHj-UZ-ZeW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="JZ1-kq-umW"/>
+                <constraint firstAttribute="trailing" secondItem="yv9-C4-nVD" secondAttribute="trailing" constant="16" id="LGj-BO-csu"/>
+                <constraint firstItem="9Mu-JE-9oD" firstAttribute="top" secondItem="2f2-ln-chg" secondAttribute="bottom" constant="16" id="N19-hT-V5w"/>
+                <constraint firstItem="9Mu-JE-9oD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="N1V-YD-Lna"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DQX-dV-AdH" secondAttribute="trailing" constant="16" id="UjV-xp-IY8"/>
+                <constraint firstItem="yv9-C4-nVD" firstAttribute="top" secondItem="gHj-UZ-ZeW" secondAttribute="bottom" constant="12" id="Wff-dA-ErZ"/>
+                <constraint firstItem="fld-01-usp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dMx-Wc-doL"/>
+                <constraint firstItem="fld-01-usp" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="f79-p0-e8q"/>
+                <constraint firstItem="2f2-ln-chg" firstAttribute="top" secondItem="yv9-C4-nVD" secondAttribute="bottom" constant="34" id="jBw-1R-U4V"/>
+                <constraint firstItem="hX5-hk-adP" firstAttribute="top" secondItem="2f2-ln-chg" secondAttribute="bottom" constant="16" id="le5-Wn-T0j"/>
+                <constraint firstItem="hX5-hk-adP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nh7-86-2vN"/>
+                <constraint firstItem="gHj-UZ-ZeW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="srZ-lj-lzx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Mu-JE-9oD" secondAttribute="trailing" constant="16" id="uuR-8f-5Mo"/>
+                <constraint firstItem="yv9-C4-nVD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yv7-Y2-wu2"/>
+                <constraint firstItem="DQX-dV-AdH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zxM-uc-daX"/>
+            </constraints>
+            <point key="canvasLocation" x="125.95419847328243" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="DQX-dV-AdH">
+            <size key="intrinsicContentSize" width="72" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.15686274509803921" green="0.37647058823529411" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

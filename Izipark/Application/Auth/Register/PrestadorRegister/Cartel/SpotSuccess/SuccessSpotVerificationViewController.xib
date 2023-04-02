@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuccessSpotVerificationViewController" customModule="Izipark" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-Nq-Ye4">
+                    <rect key="frame" x="16" y="291" width="361" height="270"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-4w-c3S">
+                            <rect key="frame" x="135.66666666666666" y="22" width="90" height="90"/>
+                            <color key="tintColor" name="Primary"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="CRl-r7-yYB"/>
+                                <constraint firstAttribute="height" constant="90" id="fCz-M5-uUY"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="45"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu perfil ha sido verificado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-vC-QsQ">
+                            <rect key="frame" x="22" y="160" width="317" height="89.666666666666686"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="32"/>
+                            <color key="textColor" name="Black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="White"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="270" id="71e-FP-md4"/>
+                        <constraint firstItem="eHM-vC-QsQ" firstAttribute="centerX" secondItem="6Vc-Nq-Ye4" secondAttribute="centerX" id="IEz-kj-xV7"/>
+                        <constraint firstItem="DEE-4w-c3S" firstAttribute="centerX" secondItem="6Vc-Nq-Ye4" secondAttribute="centerX" id="RaC-ZP-AJX"/>
+                        <constraint firstAttribute="trailing" secondItem="eHM-vC-QsQ" secondAttribute="trailing" constant="22" id="Y79-Kj-DLa"/>
+                        <constraint firstItem="eHM-vC-QsQ" firstAttribute="top" secondItem="DEE-4w-c3S" secondAttribute="bottom" constant="48" id="c8k-16-gGN"/>
+                        <constraint firstItem="DEE-4w-c3S" firstAttribute="top" secondItem="6Vc-Nq-Ye4" secondAttribute="top" constant="22" id="gpm-Gw-REW"/>
+                        <constraint firstItem="eHM-vC-QsQ" firstAttribute="leading" secondItem="6Vc-Nq-Ye4" secondAttribute="leading" constant="22" id="zBt-ks-7ZU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="zBi-sf-vB2">
+                    <rect key="frame" x="138.66666666666666" y="792" width="115.66666666666666" height="26"/>
+                    <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.13723613409999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpf-EV-jtf" customClass="IziButton" customModule="Izipark" customModuleProvider="target">
+                    <rect key="frame" x="16" y="748" width="361" height="44"/>
+                    <color key="backgroundColor" name="Primary"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="bEp-Ly-gxp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Ir al inicio">
+                        <color key="titleColor" name="White"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goHomeButton:" destination="-1" eventType="touchUpInside" id="FYr-q1-iDn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="zBi-sf-vB2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LHV-if-duz"/>
+                <constraint firstItem="jpf-EV-jtf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PNb-1I-Ur8"/>
+                <constraint firstItem="6Vc-Nq-Ye4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="YrV-qC-dyq"/>
+                <constraint firstAttribute="trailing" secondItem="6Vc-Nq-Ye4" secondAttribute="trailing" constant="16" id="Z6o-qc-707"/>
+                <constraint firstItem="zBi-sf-vB2" firstAttribute="top" secondItem="jpf-EV-jtf" secondAttribute="bottom" id="cFx-25-g85"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jpf-EV-jtf" secondAttribute="trailing" constant="16" id="d3g-VW-oEW"/>
+                <constraint firstItem="6Vc-Nq-Ye4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dST-nd-AiR"/>
+                <constraint firstItem="6Vc-Nq-Ye4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kX4-4D-ZbA"/>
+                <constraint firstItem="zBi-sf-vB2" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ucB-jc-LzY"/>
+            </constraints>
+            <point key="canvasLocation" x="109" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="jpf-EV-jtf">
+            <size key="intrinsicContentSize" width="68" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="check" width="87" height="88"/>
+        <namedColor name="Background">
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.59999999999999998" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

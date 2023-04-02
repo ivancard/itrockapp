@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoCargadoExitosamenteViewController" customModule="Izipark" customModuleProvider="target">
+            <connections>
+                <outlet property="btnContinuar" destination="d9F-qy-wNj" id="OYl-Nc-RBy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="0zv-FA-Y5d">
+                    <rect key="frame" x="153.66666666666666" y="325.66666666666669" width="86" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="bXM-Bl-Vxu"/>
+                        <constraint firstAttribute="width" constant="86" id="pvT-7X-7eU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu auto ha sido cargado exitosamente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flh-la-IuE">
+                    <rect key="frame" x="38" y="459.66666666666669" width="316" height="73.000000000000057"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="26"/>
+                    <color key="textColor" name="Black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-qy-wNj" customClass="IziButton" customModule="Izipark" customModuleProvider="target">
+                    <rect key="frame" x="16" y="763" width="361" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="UMk-Wq-pBE"/>
+                    </constraints>
+                    <color key="tintColor" name="whiteGreen"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Volver a mi perfil"/>
+                    <connections>
+                        <action selector="continuarAction:" destination="-1" eventType="touchUpInside" id="hcl-eB-hYj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="whiteGreen"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="d9F-qy-wNj" secondAttribute="bottom" constant="45" id="6iF-el-Arj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="flh-la-IuE" secondAttribute="trailing" constant="39" id="7kv-0A-esQ"/>
+                <constraint firstItem="flh-la-IuE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="TvX-Fj-cyN"/>
+                <constraint firstItem="0zv-FA-Y5d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VHW-53-gjm"/>
+                <constraint firstItem="d9F-qy-wNj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Wna-du-P0Y"/>
+                <constraint firstItem="0zv-FA-Y5d" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-70" id="n18-p6-QsH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d9F-qy-wNj" secondAttribute="trailing" constant="16" id="oW2-25-y7E"/>
+                <constraint firstItem="flh-la-IuE" firstAttribute="top" secondItem="0zv-FA-Y5d" secondAttribute="bottom" constant="48" id="y12-ts-6aw"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="d9F-qy-wNj">
+            <size key="intrinsicContentSize" width="134" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="check" width="87" height="88"/>
+        <namedColor name="Black">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteGreen">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
